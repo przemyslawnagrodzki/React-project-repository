@@ -9,7 +9,7 @@ const Column = (props) => {
         <article className={styles.column}>
             <span className={styles.icon + ' fa fa-' + props.icon} />
             <h2 className={styles.title}>{props.title}</h2>
-            < ul className={styles.cards} >
+            < ul className={styles.titles} >
                 {props.cards.map(card => <li key={card.id}>{card.title}</li>)}
             </ul >
             <CardForm columnId={props.id} action={props.addCard} />

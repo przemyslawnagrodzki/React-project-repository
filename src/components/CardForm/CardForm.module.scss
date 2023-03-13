@@ -4,10 +4,16 @@
     padding: 10px;
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: auto;
     width: 80%;
 }
 
 .titleInput {
     padding: 10px;
+}
+
+.titleName {
+    border-style: bold;
+    border: 3px;
+    text-decoration: none;
 }

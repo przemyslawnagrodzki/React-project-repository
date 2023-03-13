@@ -11,3 +11,15 @@
     justify-content: space-between;
     font-weight: bold;
 }
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    border-style: solid;
+    border: 3px;
+    padding: 5px;
+    list-style: none;
+    margin: auto;
+}
