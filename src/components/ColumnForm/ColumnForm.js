@@ -8,14 +8,15 @@ import shortid from 'shortid';
 const ColumnForm = props => {
     const [title, setTitle] = useState('');
     const [icon, setIcon] = useState('');
+    const dispatch = useDispatch();
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({ type: 'ADD_COLUMN', newColumn: { title, icon } });
+        dispatch({ type: 'ADD_COLUMN', payload: { title, icon } });
         setTitle('');
         setIcon('');
      };
 
-    const dispatch = useDispatch();
+    
 
     return (
         <form className={styles.columnForm} onSubmit={handleSubmit}>
