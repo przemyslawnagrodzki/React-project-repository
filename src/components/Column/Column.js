@@ -4,10 +4,14 @@ import Card from '../Card/Card';
 import List from '../List/List'
 import {addCard} from '../List/List'
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 const Column = (props) => {
-
-    const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id));
+    const searchString = useSelector(state => state.searchString)
+    const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id && card.title.toLowerCase().includes(searchString.toLowerCase())))
+    
+    
 
     return (
         <article className={styles.column}>

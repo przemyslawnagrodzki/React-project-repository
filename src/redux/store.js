@@ -16,6 +16,11 @@ const reducer = (state, action) => {
     default:
       return state;
   }
+
+  switch (action.type) {
+    case 'UPDATE-SEARCHSTRING':
+      return {  ...state, searchString: action.payload }
+  }
 };
 
 const store = createStore(
