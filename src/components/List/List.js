@@ -13,11 +13,11 @@ const List = () => {
               </header>
               <p className={styles.description}>Interesting things I want to check out</p>
               <section className={styles.columns}>
-                {columns.map(column =>
+                {columns.map((column) => (
                   <Column
                     key={column.id}
                     {...column}  />
-                )}
+                ))}
               </section>
               <ColumnForm />
             </div>
