@@ -1,4 +1,4 @@
-const initialState = {
+const InitialState = {
     columns: [
       {
         id: 1,
@@ -29,5 +29,5 @@ const initialState = {
   
   };
  
-  export const { searchString } = initialState;
-  export default initialState 
+  export const { searchString } = InitialState;
+  export default InitialState 
