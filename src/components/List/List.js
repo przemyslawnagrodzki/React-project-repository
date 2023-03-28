@@ -2,7 +2,7 @@ import Column from '../Column/Column'
 import styles from './List.module.scss'
 import ColumnForm from '../ColumnForm/ColumnForm'
 import { useSelector } from 'react-redux';
-import getAllColumns from '../../redux/store'
+import { getAllColumns } from '../../redux/store'
 
 const List = () => {
     const columns = useSelector(getAllColumns); 

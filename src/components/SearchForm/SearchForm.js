@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { searchString } from '../../redux/InitialState'
-
+import { updateSearchString } from '../../redux/store'
 
 
 const SearchForm = () => {
@@ -15,7 +15,7 @@ const SearchForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        dispatch(searchString(string))
+        dispatch(updateSearchString(string))
     }
 
     return (
