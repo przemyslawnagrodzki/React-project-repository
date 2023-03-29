@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 import shortid from 'shortid';
 import InitialState from './InitialState';
-import strContains from '../utils/strContains'
+import { strContains } from '../utils/strContains'
 
 const reducer = (state, action) => {
   switch (action.type) {
