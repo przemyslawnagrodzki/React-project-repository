@@ -1,10 +1,8 @@
 const strContains = (title, searchString) => {
-if (title.toLowerCase().includes(searchString.toLowerCase)) {
-    return true
+    if (title.toLowerCase().includes(searchString.toLowerCase())) {
+        return true
+    }
+    else {
+        return false
+    }
 }
-else {
-    return false
-}
-}
-
-export default strContains
