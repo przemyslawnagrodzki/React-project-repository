@@ -1,0 +1,28 @@
+@import '../../styles/settings.scss';
+
+.navbackground {
+    background-color: darken($color-dark, 3%);
+}
+
+.navclass {
+    
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.navlink {
+    padding: 5px;
+}
+
+.navlist {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
