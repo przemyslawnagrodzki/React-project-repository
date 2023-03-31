@@ -19,6 +19,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/favorite" element={<Favorite />} />
           <Route path="*" element={<NoMatch />} />
+          <Route path="/list/:listId" element={<List />} />
         </Routes>
       </Container>
  </main>
