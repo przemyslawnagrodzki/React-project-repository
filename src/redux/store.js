@@ -2,6 +2,7 @@ import { createStore } from 'redux';
 import shortid from 'shortid';
 import InitialState from './InitialState';
 import { strContains } from '../utils/strContains'
+import Column from '../components/Column/Column';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -35,6 +36,10 @@ export const getFilteredCards = ({ cards, searchString }, columnId) => cards
   .filter(card => card.columnId === columnId && strContains(card.title, searchString));
 
 export const getAllColumns = (state) => state.columns
+
+export const getListById = ( {lists}, listId ) => lists.find(list => list.id === listId)
+
+export const getColumnByList = ( {columns}, listId) => columns.filter((column) => column.listId === listId )
 
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
