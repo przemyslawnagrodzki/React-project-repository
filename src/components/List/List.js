@@ -8,31 +8,31 @@ import { useParams } from 'react-router';
 
 
 const List = () => {
-    const columns = useSelector(getAllColumns(state, listId)); 
-    const listData = useSelector(getListById(state, listId));
-    
-    const { listId } = useParams();
-    //title?
-        return (
-            <div className={styles.list}>
-              <header className={styles.header}>
-                
-                <h2 className={styles.title}>{listData.title}<span>soon!</span></h2>
-              </header>
-              <p className={styles.description}>Interesting things I want to check out</p>
-              <section className={styles.columns}>
-                {columns.map((column) => (
-                  <Column
-                    key={column.id}
-                    {...column}  />
-                ))}
-              </section>
-              <ColumnForm />
-            </div>
-          );
+  const { listId } = useParams();
+
+  const columns = useSelector(state => getColumnByList(state, listId));
+  const listData = useSelector(state => getListById(state, listId));
+
+
+  return (
+    <div className={styles.list}>
+      <header className={styles.header}>
+        <h2 className={styles.title}>{listData.title}<span>soon!</span></h2>
+      </header>
+      <p className={styles.description}>Interesting things I want to check out</p>
+      <section className={styles.columns}>
+        {columns.map((column) => (
+          <Column
+            key={column.id}
+            {...column} />
+        ))}
+      </section>
+      <ColumnForm />
+    </div>
+  );
 
 }
 
-  
+
 
 export default List 
