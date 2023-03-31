@@ -3,10 +3,10 @@ import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 import InitialState from '../../redux/InitialState'
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import { searchString } from '../../redux/InitialState'
-import { updateSearchString } from '../../redux/store'
+import { updateSearchString, resetSearchString } from '../../redux/store'
 
 
 const SearchForm = () => {
@@ -16,11 +16,12 @@ const SearchForm = () => {
     const handleSubmit = e => {
         e.preventDefault()
         dispatch(updateSearchString(string))
+        setString('')
     }
 
     return (
         <form className={styles.searchForm} onSubmit={handleSubmit}>
-            <TextInput placeholder="Search..." />
+            <TextInput placeholder="Search..." ></TextInput>
             <Button>
                 <span className="fa fa-search" />
             </Button>
