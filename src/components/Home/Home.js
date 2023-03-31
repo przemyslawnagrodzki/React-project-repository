@@ -7,7 +7,6 @@ import Lists from '../Lists/Lists';
 const Home = () => {
     return (
         <>  <Hero></Hero>
-            <SearchForm></SearchForm>
             <Lists></Lists> </>
     )
 }

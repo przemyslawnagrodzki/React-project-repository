@@ -4,6 +4,7 @@ import ColumnForm from '../ColumnForm/ColumnForm'
 import { useSelector } from 'react-redux';
 import { getAllColumns, getListById, getColumnByList } from '../../redux/store'
 import { useParams } from 'react-router';
+import SearchForm from '../SearchForm/SearchForm';
 
 
 
@@ -20,6 +21,7 @@ const List = () => {
         <h2 className={styles.title}>{listData.title}<span>soon!</span></h2>
       </header>
       <p className={styles.description}>Interesting things I want to check out</p>
+      <SearchForm></SearchForm>
       <section className={styles.columns}>
         {columns.map((column) => (
           <Column
