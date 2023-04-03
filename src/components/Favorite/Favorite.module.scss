@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '../../styles/settings.scss';
 
 .favtitle {
@@ -8,3 +9,17 @@
 .main {
     color: white;
 }
+
+.column {
+    flex-shrink: 0;
+    width: calc(33% - 12px);
+    background: $color-light;
+    margin: 0 $base-size $base-size 0;
+    padding: ($base-size * 1.5);
+    border-radius: $radius;
+    box-shadow: 0 math.div($base-size, 4) 0 rgba(0,0,0,0.3);
+    color: $color-dark;
+}
+.cards {
+    padding: math.div($base-size, 2) 0;
+  }

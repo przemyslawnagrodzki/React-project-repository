@@ -23,3 +23,15 @@
     list-style: none;
     margin: auto;
 }
+
+.btn {
+    color: $color-dark;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: 20px;
+}
+
+.isFavorite {
+    color: $color-warning;
+}
