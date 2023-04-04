@@ -23,6 +23,8 @@
     justify-content: center;
     flex-direction: column;
 }
-.cards {
+.card {
     padding: math.div($base-size, 2) 0;
+    padding: 10px;
+    
   }

@@ -1,20 +1,28 @@
+
 import styles from './Card.module.scss'
 import { toggleCardFavorite } from '../../redux/store';
 import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
+import { useState } from 'react';
 
-const Card = ({ title, id, isFavorite }) => {
+const Card = ({ id, title, isFavorite }) => {
     const dispatch = useDispatch();
     const toggleFavorite = () => {
-        dispatch(toggleCardFavorite({ id, isFavorite }));
-    }
+        dispatch(toggleCardFavorite({ id }));
+    };
+
 
     return (
 
-        <li className={styles.cards}>{title}
-            <span>
-                <button className={clsx(styles.btn, isFavorite && styles.isFavorite)} onClick={toggleFavorite}><i className='fa fa-solid fa-star-o'></i ></button >
-            </span >
+        <li className={styles.card}>{title}
+            <div>
+                <button
+                    onClick={toggleFavorite}
+                    className={clsx(styles.btn, isFavorite && styles.activeFavorite)}
+                >
+                    <span className="fa fa-solid fa-star-o"></span>
+                </button>
+            </div >
         </li>
     )
 }
