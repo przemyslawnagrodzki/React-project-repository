@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { useState , useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import { searchString } from '../../redux/InitialState'
-import { updateSearchString, resetSearchString } from '../../redux/store'
+import { updateSearchString, resetSearchString } from '../../redux/searchStringRedux'
 
 
 const SearchForm = () => {

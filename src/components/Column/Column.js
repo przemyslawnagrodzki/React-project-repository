@@ -6,7 +6,7 @@ import { addCard } from '../List/List'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { getFilteredCards } from '../../redux/store';
+import { getFilteredCards } from '../../redux/searchStringRedux';
 
 const Column = (props) => {
     const cards = useSelector(state => getFilteredCards(state, props.id));
