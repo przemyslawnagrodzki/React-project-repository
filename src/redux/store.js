@@ -1,7 +1,4 @@
-import shortid from 'shortid';
 import InitialState from './InitialState';
-import { strContains } from '../utils/strContains'
-import Column from '../components/Column/Column';
 import { createStore, combineReducers } from 'redux';
 import listsReducer from './listsRedux'
 import columnsReducer from './columnsRedux'
@@ -25,14 +22,4 @@ const store = createStore(
 
 export default store;
 //selectors
-
-
-
-
-
-
-
-
-// action creators
-
 
